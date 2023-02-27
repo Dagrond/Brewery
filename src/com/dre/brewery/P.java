@@ -311,8 +311,10 @@ public class P extends JavaPlugin {
 
 	// Utility
 
-	public void msg(CommandSender sender, String msg) {
-		sender.sendMessage(color("&2[Brewery] &f" + msg));
+	public void msg(CommandSender sender, String pmsg) {
+		if (!pmsg.equals("")) {
+			sender.sendMessage(color(pmsg));
+		}
 	}
 
 	public void log(String msg) {
